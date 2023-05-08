@@ -28,12 +28,6 @@ const { t } = useI18n()
       <em text-sm opacity-75>{{ t('intro.desc') }}</em>
     </p>
 
-    <TimeNow />
-
-    <div py-2 />
-
-    <TheGrid />
-
     <div py-4 />
 
     <TheInput

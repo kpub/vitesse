@@ -14,6 +14,12 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     TheCounter: typeof import('./components/TheCounter.vue')['default']
     TheFooter: typeof import('./components/TheFooter.vue')['default']
+    TheGrid: typeof import('./components/widget/TheGrid.vue')['default']
     TheInput: typeof import('./components/TheInput.vue')['default']
+    TheWidget: typeof import('./components/widget/TheWidget.vue')['default']
+    TimeNow: typeof import('./components/widget/TimeNow.vue')['default']
+    VarCol: typeof import('@varlet/ui')['_ColComponent']
+    VarLink: typeof import('@varlet/ui')['_LinkComponent']
+    VarRow: typeof import('@varlet/ui')['_RowComponent']
   }
 }

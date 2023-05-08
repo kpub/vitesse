@@ -14,6 +14,7 @@ import Inspector from 'vite-plugin-vue-inspector'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
+import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
 
 // @ts-expect-error failed to resolve types
 import VueMacros from 'unplugin-vue-macros/vite'
@@ -67,6 +68,10 @@ export default defineConfig({
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
+      // UI libraries that will be registered on the page
+      resolvers: [
+        VarletUIResolver(),
+      ],
     }),
 
     // https://github.com/antfu/unocss
