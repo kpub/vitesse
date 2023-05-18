@@ -9,7 +9,7 @@ function getTime() {
   timeStr.value = dayjs().format('HH:mm:ss')
 }
 function getDay() {
-  dayStr.value = dayjs().format('M/D dddd')
+  dayStr.value = dayjs().format('YYYY/M/D dddd')
 }
 
 let timer: any = 0
@@ -28,7 +28,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div>
-    <label text-6xl>{{ timeStr }}</label>
+    <label text-8xl>{{ timeStr }}</label>
   </div>
   <div>
     <label>{{ dayStr }}</label>

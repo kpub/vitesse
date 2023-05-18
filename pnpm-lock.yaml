@@ -54,6 +54,7 @@ specifiers:
   vue-i18n: ^9.2.2
   vue-router: ^4.1.6
   vue-tsc: ^1.2.0
+  vue-waterfall-easy: ^2.4.4
 
 dependencies:
   '@unocss/reset': 0.51.8
@@ -111,6 +112,7 @@ devDependencies:
   vite-ssg-sitemap: 0.4.3
   vitest: 0.30.1
   vue-tsc: 1.6.0_typescript@5.0.4
+  vue-waterfall-easy: 2.4.4
 
 packages:
 
@@ -9703,6 +9705,11 @@ packages:
       '@volar/vue-typescript': 1.6.0_typescript@5.0.4
       semver: 7.5.0
       typescript: 5.0.4
+    dev: true
+
+  /vue-waterfall-easy/2.4.4:
+    resolution: {integrity: sha512-5OkpT2FPNC3rHBy858zk/nmJxqdPaGmj/KVbmA6dgcvtsovKMa+zuf/Z7F+S2NnObeavpIBztTWgcH3S42ZD+g==}
+    engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
     dev: true
 
   /vue/3.2.47:

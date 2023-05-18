@@ -1,11 +1,18 @@
 <script setup lang="ts">
-const links = [{ title: 'DOA', url: 'https://doa.envision-aesc.cn/', logo: '' }, { title: '2PP', url: 'http://tech.envision-aesc.cn/tpp/index', logo: '' }]
+// import mock data
+import apps from './data'
 </script>
 
 <template>
-  <var-row :gutter="5">
-    <var-col v-for="(link, index) in links" :key="index" :span="2">
-      <TheWidget :title="link.title" :link="link.url" :logo="link.logo" />
-    </var-col>
+  <var-row justify="center" px-30>
+    <template v-for="(app, index) in apps" :key="index">
+      <var-col
+        :span="app.w === undefined ? 2 : app.w * 2"
+        py-2
+        text-center
+      >
+        <TheWidget :title="app.title" :href="app.url" :icon="app.icon" :intro="app.intro" />
+      </var-col>
+    </template>
   </var-row>
 </template>

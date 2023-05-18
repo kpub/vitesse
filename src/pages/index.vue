@@ -11,47 +11,18 @@ function go() {
     router.push(`/hi/${encodeURIComponent(name.value)}`)
 }
 
-const { t } = useI18n()
+// const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    <div text-4xl>
-      <div i-carbon-campsite inline-block />
-    </div>
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        Vitesse
-      </a>
-    </p>
-    <p>
-      <em text-sm opacity-75>{{ t('intro.desc') }}</em>
-    </p>
+  <div h-screen w-screen overflow-hidden>
+    <!-- sidebar -->
+    <Sidebar />
 
-    <TimeNow />
-
-    <div py-2 />
-
-    <TheGrid />
-
-    <div py-4 />
-
-    <TheInput
-      v-model="name"
-      :placeholder="t('intro.whats-your-name')"
-      autocomplete="false"
-      @keydown.enter="go"
-    />
-    <!-- <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label> -->
-
-    <div>
-      <button
-        m-3 text-sm btn
-        :disabled="!name"
-        @click="go"
-      >
-        {{ t('button.go') }}
-      </button>
+    <!-- main content -->
+    <div h-full>
+      <TimeNow h-3xl />
+      <Dashboard bg-gray-4 />
     </div>
   </div>
 </template>

@@ -9,17 +9,33 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AescMenu: typeof import('./components/AescMenu.vue')['default']
+    AescWaterfall: typeof import('./components/common/AescWaterfall.vue')['default']
+    Dashboard: typeof import('./components/common/dashboard.vue')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sidebar: typeof import('./components/common/sidebar.vue')['default']
     TheCounter: typeof import('./components/TheCounter.vue')['default']
     TheFooter: typeof import('./components/TheFooter.vue')['default']
     TheGrid: typeof import('./components/widget/TheGrid.vue')['default']
     TheInput: typeof import('./components/TheInput.vue')['default']
     TheWidget: typeof import('./components/widget/TheWidget.vue')['default']
     TimeNow: typeof import('./components/widget/TimeNow.vue')['default']
+    VarButton: typeof import('@varlet/ui')['_ButtonComponent']
+    VarCard: typeof import('@varlet/ui')['_CardComponent']
     VarCol: typeof import('@varlet/ui')['_ColComponent']
+    VarEllipsis: typeof import('@varlet/ui')['_EllipsisComponent']
+    VarFab: typeof import('@varlet/ui')['_FabComponent']
+    VarIcon: typeof import('@varlet/ui')['_IconComponent']
+    VarImage: typeof import('@varlet/ui')['_ImageComponent']
+    VarImg: typeof import('@varlet/ui')['_ImgComponent']
     VarLink: typeof import('@varlet/ui')['_LinkComponent']
+    VarPaper: typeof import('@varlet/ui')['_PaperComponent']
     VarRow: typeof import('@varlet/ui')['_RowComponent']
+    VarSticky: typeof import('@varlet/ui')['_StickyComponent']
+  }
+  export interface ComponentCustomProperties {
+    vHover: typeof import('@varlet/ui')['_HoverComponent']
   }
 }
